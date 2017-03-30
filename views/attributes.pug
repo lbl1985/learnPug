@@ -1,0 +1,65 @@
+extends ./layout.pug
+
+block content
+    - var authenticated = true
+    body(class=authenticated ? 'authed' : 'anon')
+        a(href='http://www.google.com') Google
+        br
+        a(class='button' href="https://www.google.com") Google button
+        br
+        a(class="buton", href="https://www.google.com") Google button, Comma
+        br
+        input(
+            type="checkbox"
+            name="agreement"
+            checked
+        )
+        br
+        div(class='div-class', (click)='play()')
+            p junk info
+        br
+        div(class="div-class" '(click)'='play()')
+            p junk info 2
+        br
+
+    - var url = "https://www.bing.com"
+        a(href=url) bing web page
+
+        div( escaped="<code>")
+        //- div (unescaped !="<code>")
+
+        br
+        h3 Boolean Attribute
+        input(type="checkbox" checked) 
+        br
+        input(type="checkbox" checked=true)
+        br
+        input(type="checkbox" checked=false)
+        br
+        input(type="checkbox" checked=true.toString())
+
+        h3 Style Attribute
+        a(style={color:'red', background:"green"}) style testing
+
+        h3 Class Attribute
+        - var currentUrl = '/about'
+        a(class={active: currentUrl === '/'} href='/') Home
+        br
+        a(class={active: currentUrl === '/about'} href='/about') About
+
+        h3 Class Literal, by using a.button or .content for div
+        a.button testing button
+        br
+        .content test content
+
+        h3 ID Literal a#main-link or #main-link for div
+        a#main-link 
+        br 
+        #main-link
+
+        h3 &attributes
+        - var attributes = {};
+        - attributes.class = 'baz';
+        div#foo(data-bar = "foo")&attributes(attributes) test &attributes
+
+
