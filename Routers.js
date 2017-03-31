@@ -25,4 +25,9 @@ router.get("/conditionals", function(req, res) {
     res.render("conditionals");
 });
 
+router.get("/filters", function(req, res) {
+    res.render("filters");
+});
+
+
 module.exports = router;
