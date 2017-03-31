@@ -17,4 +17,8 @@ router.get("/code", function(req, res) {
     res.render("code");
 });
 
+router.get("/comments", function(req, res) {
+    res.render("comments");
+});
+
 module.exports = router;

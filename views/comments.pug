@@ -1,0 +1,21 @@
+extends ./layout.pug
+block content
+    h3 comments
+    // just some comments
+    p foo
+    p bar
+
+    h3 unbuffered comments
+    //- will not output within markup
+    p unbuffered comments foo
+    p unbuffered comments bar
+
+    h3 Block comments
+    // - 
+        Comments for your template 
+        2nd line
+    //
+        Comments for your HTML readers. 
+        2nd line
+    p block comments foo
+    p block comments bar
