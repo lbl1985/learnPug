@@ -1,0 +1,25 @@
+extends ./layout.pug
+block content
+    h3 Unbuffered Code: Starts with -
+    - for(var x = 0; x < 3; x++)     
+        li item
+
+    h4 block unbuffered Code
+    -
+        var list = ["Uno", "Dos", "Tres",
+         "Cuatro", "Cinco", "Seis"];
+    each item in list
+        li= item
+
+    h3 Buffered Code
+    p
+        = 'This code is <escaped>!'
+
+    p='This code is' + ' <escaped>!'
+
+    h3 Unescaped Buffered Code
+    p 
+        != 'This code is <strong>not</strong> escaped!'
+
+    p!= 'This code is' + ' <strong>not</strong> escaped!'
+    

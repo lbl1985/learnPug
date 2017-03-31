@@ -13,4 +13,8 @@ router.get("/case", function(req, res) {
     res.render("case");
 });
 
+router.get("/code", function(req, res) {
+    res.render("code");
+});
+
 module.exports = router;
