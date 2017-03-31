@@ -1,3 +1,28 @@
 extends ./layout.pug
 block content
     h2(align='center') Case Page
+    
+    h3 Case
+    - var friends = 10
+    case friends
+        when 0
+            p you have no friends
+        when 1
+            p you have a friends
+        default
+            p you have #{friends} friends
+    h3 Case fall through
+    - var friends_2 = 0
+    case friends_2
+        when 0
+        when 1
+            p you have very few friends
+        default
+            p you have #{friends_2} friends
+    h3 block extension
+    
+    -var friends_3 = 5
+    case friends_3
+        when 0: p you have no friends
+        when 1: p you have one friends
+        default: p you have #{friends_3} friends
