@@ -21,4 +21,8 @@ router.get("/comments", function(req, res) {
     res.render("comments");
 });
 
+router.get("/conditionals", function(req, res) {
+    res.render("conditionals");
+});
+
 module.exports = router;
