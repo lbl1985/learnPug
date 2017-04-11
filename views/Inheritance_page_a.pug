@@ -1,0 +1,6 @@
+extends ./Inheritance_layout.pug
+block content
+    h1= title
+    - var pets = ['cat', 'dog']
+    each petName in pets
+        p= petName

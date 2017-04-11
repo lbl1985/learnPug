@@ -29,5 +29,8 @@ router.get("/filters", function(req, res) {
     res.render("filters");
 });
 
+router.get("/Inheritance", function(req, res) {
+    res.render("Inheritance_page_a", {title:"hello world"});
+})
 
 module.exports = router;
